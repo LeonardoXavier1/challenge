@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -50,9 +49,9 @@
                                         } else {
                                           echo "CEP: ".$informacao->cep."<br>";
                                           echo "Logradouro: ".$informacao->logradouro."<br>";
-                                          echo "Complemento: ".$informacao->complemento."<br>";
-                                          echo "Bairro: ".$informacao->bairro."<br>";
-                                          echo "Cidade: ".$informacao->localidade."<br>";
+                                          echo "Cidade: ".$informacao->cidade."<br>";
+                                          echo "IBGE: ".$informacao->ibge."<br>";
+                                          echo "DDD: ".$informacao->ddd."<br>";
                                           echo "Estado: ".$informacao->uf."<br>";
                                          }
                                             }
