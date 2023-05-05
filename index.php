@@ -29,17 +29,42 @@
     <section class="caixa">
 
         <div class="box">
-            <form method="post" action="main.php">
+            <form method="post">
                       <input type="text" name="cep" id="cep" placeholder="Digite seu CEP:">
             </form>
             
         </div>
-     
+
+     <section>
+        <div class="info">
+            <div>
+                 <?php
+                    if(isset($_POST['cep'])) {
+                         $cep = $_POST['cep'];
+                         $url = "http://viacep.com.br/ws/{$cep}/json/";
+                         $informacao = json_decode(file_get_contents($url));
+    
+                                 if(isset($informacao->erro)){
+                                         echo "CEP não encontrado";
+                                        } else {
+                                          echo "CEP: ".$informacao->cep."<br>";
+                                          echo "Logradouro: ".$informacao->logradouro."<br>";
+                                          echo "Cidade: ".$informacao->localidade."<br>";
+                                          echo "IBGE: ".$informacao->ibge."<br>";
+                                          echo "DDD: ".$informacao->ddd."<br>";
+                                          echo "Estado: ".$informacao->uf."<br>";
+                                         }
+                                            }
+?>
+            </div>
+           
+        </div>
+        </section>
 
     </section>
     <hr class="linha">
 
-    <section class="Créditos">
+    <section class="Créditos" class="">
         <div class="container"> 
              <p class="escritas"> Site produzido por <a href="https://github.com/LeonardoXavier1" target="_blank">Leonardo Matheus Xavier Vieira</a> 🔥 </p>
         </div>
