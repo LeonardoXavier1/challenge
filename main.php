@@ -17,7 +17,7 @@
                 <ul>
     
                     <li class="escritas"> <a href="https://viacep.com.br/" target="_blank">Documentação </a></li>
-                    <li class="escritas"> <a href="" target="">Exemplo </a></li>
+                    <li class="escritas"> <a href="https://viacep.com.br/ws/01001000/json/" target="_blank">Exemplo </a></li>
                     
                 </ul>
             </nav>
@@ -49,7 +49,7 @@
                                         } else {
                                           echo "CEP: ".$informacao->cep."<br>";
                                           echo "Logradouro: ".$informacao->logradouro."<br>";
-                                          echo "Cidade: ".$informacao->cidade."<br>";
+                                          echo "Cidade: ".$informacao->localidade."<br>";
                                           echo "IBGE: ".$informacao->ibge."<br>";
                                           echo "DDD: ".$informacao->ddd."<br>";
                                           echo "Estado: ".$informacao->uf."<br>";
@@ -64,7 +64,7 @@
     </section>
     <hr class="linha">
 
-    <section class="Créditos">
+    <section class="Créditos" class="">
         <div class="container"> 
              <p class="escritas"> Site produzido por <a href="https://github.com/LeonardoXavier1" target="_blank">Leonardo Matheus Xavier Vieira</a> 🔥 </p>
         </div>
